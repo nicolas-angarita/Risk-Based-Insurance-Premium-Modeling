@@ -1,22 +1,23 @@
 # Risk Based Insurance Premium Modeling
 
-# Project Goals
-
-1. Develop a predictive model to identify customers most likely to subscribe to a term deposit in order to optimize telemarketing campaign efficiency.
-2. Identify the key factors influencing customer subscription behavior to inform marketing strategy and targeting decisions.
+1. Develop a predictive regression model to accurately estimate individual medical insurance charges based on demographic and lifestyle factors in order to support data-driven underwriting decisions.
+2. Identify and quantify the key drivers influencing insurance premium costs (e.g., smoking status, BMI, age) to better understand risk factors and inform pricing strategy.
 
 # Project Description
 
-A Portuguese banking institution would like to know if a client is likely to subscribe to a term deposit based on their marketing campaigns. Term deposits are a major source of income for a bank. A term deposit is a cash investment held at a financial institution. Your money is invested for an agreed rate of interest over a fixed amount of time, or term. The bank has various outreach plans to sell term deposits to their customers such as email marketing, advertisements, telephonic marketing, and digital marketing.
+This project explores the relationship between demographic and lifestyle attributes and individual medical insurance charges. Using a dataset of 1,338 insured individuals, the objective is to develop predictive regression models that estimate insurance premiums based on features such as age, BMI, smoking status, number of children, sex, and region.
 
-Telephonic marketing campaigns are one of the most effective ways to reach out to people. However, they require huge investment as large call centers are hired to actually execute these campaigns. It is crucial to identify the customers most likely to convert beforehand so that they can be specifically targeted via call.
+Because medical cost data is highly right-skewed, this project also investigates target transformation techniques to improve model assumptions and predictive performance. The analysis combines exploratory data analysis, statistical hypothesis testing, and regression modeling to generate both predictive accuracy and interpretable business insights.
+
+The final model aims to provide accurate premium predictions while identifying the key drivers of insurance risk.
 
 # Initial Questions
 
- 1. Does the type of job have a relationship if a client will subscribe to a term deposit?
- 2. Does the type of education a client have make it more likely to subscribe?
- 3. Are clients older than average age more likely to subscribe? 
- 4. Does the duration of contact have a relationship with subscription to a term deposit?
+1. Is smoking status a statistically significant predictor of insurance charges?
+2. Is BMI positively correlated with insurance costs?
+3. Do insurance charges increase linearly with age?
+4. Does the number of children significantly influence premium pricing?
+5. Are there statistically significant differences in charges across regions?
 
 # The Plan
 
@@ -32,9 +33,9 @@ Telephonic marketing campaigns are one of the most effective ways to reach out t
  - Create at least two hypotheses, set an alpha, run the statistical tests needed, reject or fail to reject the Null Hypothesis, document any findings and takeaways that are observed.
  
 ### Model Data 
- - Establish a baseline accuracyusing Logoistic Regression 
+ - Establish a baselin. The baseline model will consist of predicting the average insurance charge for all individuals. Model performance to be measured using RMSE.
  
- - Create and train at least four classification models
+ - Create and train at least four regression models
  
  - Evaluate models on train and validate datasets
  
@@ -55,26 +56,18 @@ Telephonic marketing campaigns are one of the most effective ways to reach out t
 
 | Feature  | Definition |
 | ------------- | ------------- |
-| age  | age for each client (numeric)  |
-| job | admin,unknown,unemployed,management,housemaid,entrepreneur,student, blue-collar,self-employed,retired,technician,services (categorical) |
-| marital | married,divorced,single; note: "divorced" means divorced or widowed) (categorical) |
-| education | unknown,secondary,primary,tertiary(categorical) |
-| default | has credit in default? (binary: yes,no)  |
-| balance | average yearly balance, in euros (numeric) | 
-| housing | has housing loan? (binary: yes or no) |
-| loan | has personal loan?(binary: yes or no) |
-| contact | related with the last contact of the current campaign:  contact communication type unknown,telephone,cellular (categorical) |
-| day | last contact day of the month (numeric) |
-| month | last contact month of year (categorical) |
-| duration | last contact duration, in seconds (numeric) |
-| campaign | number of contacts performed during this campaign and for this client (numeric, includes last contact) |
-| pdays | number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted) |
-| previous | number of contacts performed before this campaign and for this client (numeric) |
-| poutcome | outcome of the previous marketing campaign unknown,other,failure,success (categorical) |
+| age  | Age of primary beneficiary (numeric)  |
+| sex | Insurance contractor gender, female / male (binary) |
+| bmi | Body mass index, providing an understanding of body, weights that are relatively high or low (numeric) |
+| children | Number of children covered by health insurance / Number of dependents (numeric) |
+| smoker | (binary: smoker, no-smoker)  |
+| region | The beneficiary's residential area in the US, northeast, southeast, southwest, northwest. (categorical) | 
+| charges | Individual medical costs billed by health insurance. (numeric) |
+
 
 ## Steps to Reproduce
 
- - You will need both csv files from kaggle 
+ - You will need the csv file from kaggle 
 
 - Clone my repo including the acquire.py, prepare.py, and explore.py
 
@@ -82,7 +75,7 @@ Telephonic marketing campaigns are one of the most effective ways to reach out t
 
 - Run notebook.
 
-## Conclusion
+## Conclusion (TBD)
 
 - Approximately 13% of contacted clients subscribe to term deposits, indicating a highly imbalanced dataset.
 
