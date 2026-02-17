@@ -52,7 +52,7 @@ The final model aims to provide accurate premium predictions while identifying t
 
 | Target Variable |     Definition     |
 | --------------- | ------------------ |
-|      subscribed      | yes(1) or no(0) |
+|      charges     | Individual medical costs billed by health insurance. (numeric) |
 
 | Feature  | Definition |
 | ------------- | ------------- |
@@ -62,7 +62,7 @@ The final model aims to provide accurate premium predictions while identifying t
 | children | Number of children covered by health insurance / Number of dependents (numeric) |
 | smoker | (binary: smoker, no-smoker)  |
 | region | The beneficiary's residential area in the US, northeast, southeast, southwest, northwest. (categorical) | 
-| charges | Individual medical costs billed by health insurance. (numeric) |
+
 
 
 ## Steps to Reproduce
