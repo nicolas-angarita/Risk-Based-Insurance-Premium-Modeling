@@ -24,10 +24,10 @@ The final model aims to provide accurate premium predictions while identifying t
  - Create README with project goals, project description, initial hypotheses, planning of project, data dictionary, and come up with recommedations/takeaways
 
 ### Acquire Data
- - Acquire data from Kaggle and create a function to later import the data into a juptyer notebook. (acquire.py)
+ - Acquire data from Kaggle and create a function to later import the data into a juptyer notebook. (wrangle.py)
 
 ### Prepare Data
- - Clean and prepare the data creating a function that will give me data that is ready to be explored upon. Within this step we will also write a function to split our data into train, validate, and test. (prepare.py) 
+ - Clean and prepare the data creating a function that will give me data that is ready to be explored upon. Within this step we will also write a function to split our data into train, validate, and test. (wrangle.py) 
  
 ### Explore Data
  - Create at least two hypotheses, set an alpha, run the statistical tests needed, reject or fail to reject the Null Hypothesis, document any findings and takeaways that are observed.
